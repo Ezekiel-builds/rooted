@@ -67,7 +67,7 @@ function HomePage() {
                                 Word Inward
                             </p>
 
-                            <p className="how__it-works-description">
+                            <p className="how__it-works-text">
                                 A meditative, distraction-free daily
                                 reading experience. Slow down and let
                                 the Scripture take root before the
@@ -84,7 +84,7 @@ function HomePage() {
                                 Word Outward
                             </p>
 
-                            <p className="how__it-works-description">
+                            <p className="how__it-works-text">
                                 Carry the Word with you. Gentle
                                 memory verse tracking that
                                 encourages deep reflection rather
@@ -101,7 +101,7 @@ function HomePage() {
                                 Life Together
                             </p>
 
-                            <p className="how__it-works-description">
+                            <p className="how__it-works-text">
                                 See how your church is growing. Share
                                 reflections, prayer requests, and
                                 encourage one another in a private,

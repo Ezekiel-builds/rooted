@@ -16,6 +16,9 @@
   --HEADERS: #071C13;
   --TEXT__COLOR: #424844;
 
+  /* Cards */
+  --CARD__BG: #F5F3EF;
+
   /* Micro text: Captions, badges, tags (12px -> 14px) */
   --font-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
 
@@ -49,7 +52,7 @@
 
   --HERO__BTN-BG: #071C13;
 
-
+  --ICON__COLOR: #E9C349;
 }
 
 body {
