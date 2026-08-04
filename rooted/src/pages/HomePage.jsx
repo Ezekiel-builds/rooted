@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import mockupImg from '../assets/Rooted-Mockup.png';
 import logoImg from '../assets/logo.png';
+import vectorImg from '../assets/SVG.png';
 import './HomePage.css';
 
 function HomePage() {
@@ -10,15 +11,16 @@ function HomePage() {
             <Header />
 
             <main className="home__page">
+                <img src={vectorImg} alt="Vector image" className="home__page-vector-img"/>
                 <div className="home__page-heading">
                     <span className="heading__eyebrow">
                         A DISCIPLESHIP PLATFORM
                     </span>
 
                  <div className="heading__content">
-                        <h1 className="heading__title">
-                            Grow deeper, together.
-                        </h1>
+                            <h1 className="heading__title">
+                                Grow deeper, <span className="heading__title-highlighted">together.</span>
+                            </h1>
                         
                         <p className="heading__description">
                             Rooted and built up in Christ. A calm, intentional space for your church to
