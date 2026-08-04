@@ -60,7 +60,7 @@ function HomePage() {
 
                 <div className="how__it-works-cards">
                     <div className="how__it-works-card">
-                        <i class="fi fi-rs-book how__it-works-icon how__it-works-icon--primary"></i>
+                        <i class="fi fi-ss-book how__it-works-icon how__it-works-icon--primary"></i>
 
                         <div className="how__it-works-card-content">
                             <p className="how__it-works-header">
