@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import mockupImg from '../assets/Rooted-Mockup.png';
 import logoImg from '../assets/logo.png';
 import vectorImg from '../assets/SVG.png';
+import treeRimgImg from '../assets/Tree-ring.png';
 import './HomePage.css';
 
 function HomePage() {
@@ -60,7 +61,7 @@ function HomePage() {
 
                 <div className="how__it-works-cards">
                     <div className="how__it-works-card">
-                        <i class="fi fi-ss-book how__it-works-icon how__it-works-icon--primary"></i>
+                        <i className="fi fi-ss-book how__it-works-icon how__it-works-icon--primary"></i>
 
                         <div className="how__it-works-card-content">
                             <p className="how__it-works-header">
@@ -114,11 +115,11 @@ function HomePage() {
 
             <section className="features">
                 <div className="features__left">
-                    <h3 classNmae="feature__title">
-                        Digital spaces that feel like <span className="feature__titlw--highlight">Physical journals.</span>
+                    <h3 className="feature__title">
+                        Digital spaces that feel like <span className="feature__title--highlight">Physical journals.</span>
                     </h3>
 
-                    <div className="feature__meta">
+                    <div className="feature__meta feature__meta--primary">
                         <div className="feature__meta-item">
                             <p className="feature__meta-head">
                                 Daily Check-in
@@ -132,7 +133,7 @@ function HomePage() {
                         </div>
                     </div>
 
-                    <div className="feature__meta">
+                    <div className="feature__meta feature__meta--secondary">
                         <div className="feature__meta-item">
                             <p className="feature__meta-head">
                                 Spiritual Health Tracking
@@ -149,13 +150,19 @@ function HomePage() {
                 </div>
 
                 <div className="features__right">
-                    <img src={mockupImg} alt="Rooted mockup" className="features__image"/>
-
-                    <img src={logoImg} alt="Rooted logo" className="features__sub-image"/>
+                    <div className="feature__image-container">
+                        <img src={mockupImg} alt="Rooted mockup" className="feature__image" />
+                        <img src={logoImg} alt="Rooted logo" className="feature__sub-image" width={80} />
+                    </div>
                 </div>
             </section>
 
             <section className="focus">
+                <img src={treeRimgImg} 
+                alt="Abstract tree ring graphics" 
+                className="focus__rings"
+                />
+                
                 <div className="focus__heading">
                     <h2 className="focus__heading-text">
                         A Handcrafted Experience For Your Congregation
@@ -170,13 +177,14 @@ function HomePage() {
                     </p>
                 </div>
 
-                <div className="focus__benfits">
+                <div className="focus__benefits">
+
                     <div className="focus__benefit">
                         <h4 className="focus__benefit-value">
                             75%
                         </h4>
 
-                        <p className="focus__vaue-meta">
+                        <p className="focus__value-meta">
                             HIGHER ENGAGEMENT
                         </p>
                     </div>
@@ -186,7 +194,7 @@ function HomePage() {
                             3x
                         </h4>
 
-                        <p className="focus__vaue-meta">
+                        <p className="focus__value-meta">
                            MORE SCRIPTURE READ
                         </p>
                     </div>
@@ -196,7 +204,7 @@ function HomePage() {
                             Daily
                         </h4>
 
-                        <p className="focus__vaue-meta">
+                        <p className="focus__value-meta">
                            SHARED RHYTHMS
                         </p>
                     </div>
@@ -206,7 +214,7 @@ function HomePage() {
                             1
                         </h4>
 
-                        <p className="focus__vaue-meta">
+                        <p className="focus__value-meta">
                             QUIET FOCUS
                         </p>
                     </div>
@@ -214,7 +222,7 @@ function HomePage() {
             </section>
 
             <section className="final__cta">
-                <i class="fi fi-rs-rose-alt final__cta-icon"></i>
+                <i className="fi fi-rs-rose-alt final__cta-icon"></i>
 
                 <h3 className="final__cta-heading">
                     Invite your church to start growing.

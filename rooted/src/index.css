@@ -15,6 +15,7 @@
   --HERO__Button-COLOR: #FFFF;
   --HEADERS: #071C13;
   --TEXT__COLOR: #424844;
+  --FOCUS__Text-COLOR: #B4CCBE;
 
   /* Cards */
   --CARD__BG: #F5F3EF;
@@ -55,6 +56,10 @@
   --ICON__COLOR: #E9C349;
   --ICON__COLORII: #735C00;
   --ICON__COLOR3: #52634F;
+
+  --FEATURE__BORDER: rgba(82, 99, 79, 0.3);
+  --FEATURE__IMG-Offset: #EAE8E4;
+  --FEATURE__IMG-BG: #EFEEEA;
 }
 
 body {
