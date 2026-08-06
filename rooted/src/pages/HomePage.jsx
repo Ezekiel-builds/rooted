@@ -78,7 +78,7 @@ function HomePage() {
                     </div>
 
                     <div className="how__it-works-card">
-                       <i class="fi fi-ss-heart how__it-works-icon how__it-works-icon--secondary"></i>
+                       <i className="fi fi-ss-heart how__it-works-icon how__it-works-icon--secondary"></i>
 
                         <div className="how__it-works-card-content">
                             <p className="how__it-works-header">
@@ -95,7 +95,7 @@ function HomePage() {
                     </div>
 
                     <div className="how__it-works-card">
-                       <i class="fi fi-sr-users-alt how__it-works-icon how__it-works-icon--tertiary"></i>
+                       <i className="fi fi-sr-users-alt how__it-works-icon how__it-works-icon--tertiary"></i>
 
                         <div className="how__it-works-card-content">
                             <p className="how__it-works-header">
@@ -158,11 +158,12 @@ function HomePage() {
             </section>
 
             <section className="focus">
+            
                 <img src={treeRimgImg} 
                 alt="Abstract tree ring graphics" 
                 className="focus__rings"
                 />
-                
+
                 <div className="focus__heading">
                     <h2 className="focus__heading-text">
                         A Handcrafted Experience For Your Congregation
@@ -238,19 +239,27 @@ function HomePage() {
                     </label>
 
                     <input type="email" placeholder="pastor@gracechurch.org" className="final__cta-input" />
+
+                    <div className="footer__button-container">
+                        <Link to="/" className="footer__button">Begin the Journey</Link>
+                    </div>
                 </form>
             </section>
 
             <footer className='footer__container'>
-                <p className="footer__logo-text">Rooted</p>
-
-                <div className="footer__links">
-                    <Link className="footer__link">PRIVACY</Link>
-                    <Link className="footer__link">TERMS</Link>
-                    <Link className="footer__link">SUPPORT</Link>
+                <div className='footer__logo'>
+                    <h4 className="footer__logo-text">Rooted</h4>
                 </div>
 
-                <p className="footer__text">&copy; 2026 Rooted Discipleship. Sown in faith.</p>
+                <div className="footer__links">
+                    <Link to="" className="footer__link">PRIVACY</Link>
+                    <Link  to="" className="footer__link">TERMS</Link>
+                    <Link  to="" className="footer__link">SUPPORT</Link>
+                </div>
+
+                <div className='footer__bottom'>
+                    <p className="footer__text">&copy; 2026 Rooted Discipleship. Sown in faith.</p>
+                </div>
             </footer>
         </div>
     )

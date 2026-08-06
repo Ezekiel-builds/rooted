@@ -224,12 +224,11 @@
 }
 
 .features__left {
-    width: 520px;
+    width: 100%;
     gap: 20px;
 }
 
 .features__left .feature__title {
-    width: 520px;
     font-size: var(--font-xl);
     font-weight: 400;
     margin-bottom: 20px;
@@ -371,7 +370,7 @@
 }
 
 .focus__heading-text {
-    width: 720px;
+    max-width: 720px;
     word-spacing: 4px;
     text-align: center;
     font-size: var(--font-xl);
@@ -379,7 +378,7 @@
 }
 
 .focus__text {
-    width: 720px;
+    width: inherit;
     text-align: center;
     margin-top: 20px;
     color: var(--FOCUS__Text-COLOR);
@@ -387,7 +386,8 @@
 }
 
 .focus__benefits {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin: 20px;
     text-align: center;
@@ -402,4 +402,211 @@
     color: var(--FOCUS__Text-COLOR);
     font-size: var(--font-sm);
     font-weight: 400;
+}
+
+/*  Final  CTA */
+
+.final__cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 84px;
+}
+
+.final__cta .final__cta-icon {
+    font-size: var(--font-lg);
+    color: var(--FEATURE__BORDER);
+    margin-bottom: 20px;
+}
+
+.final__cta-heading {
+    text-align: center;
+    font-size: var(--font-xl);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.final__cta-text {
+    width: 100%;
+    color: var(--COLOR);
+    font-size: var(--font-base);
+}
+
+.final__cta-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px
+}
+
+.fina__cta-label {
+    color: var(--COLOR);
+    font-size: var(--font-base);
+    font-weight: 320;
+}
+
+.final__cta-input {
+    width: 100%;
+    padding: 16px;
+    color: var(--COLOR);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid rgba(114, 120, 116, 0.3);
+    border-radius: 8px 8px 0 0;
+    background-color: var(--CARD__BG);
+
+    margin-top: 12px;
+}
+
+.final__cta-input:focus {
+    outline: none;
+}
+
+/* Footer */
+
+.footer__container {
+    background-color: rgba(194, 200, 194, 0.2);
+    color: var(--COLOR);
+    margin-top: 120px;
+    font-weight: 320;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 32px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer__logo .footer__logo-text {
+    font-size: var(--font-md);
+    font-weight: 400;
+    color: var(--COLOR);
+}
+
+.footer__logo {
+    flex: 1 1 200px;
+}
+
+.footer__links {
+    flex: 1 1 200px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__link {
+    color: var(--COLOR);
+}
+
+.footer__bottom {
+    flex: 1 1 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__link {
+    color: var(--HEADER__Heading-COLOR);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.footer__text {
+    font-size: var(--font-sm);
+    font-weight: 360;
+}
+
+.footer__button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin-top: 32px;
+    background-color: var(--HEADERS);
+    color: #FFFF;
+    padding: 20px 0;
+    border-radius: 12px;
+
+    font-size: var(--font-sm);
+}
+
+@media (min-width: 640px) {
+    .features {}
+}
+
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px;
+    }
+
+    .footer__logo,
+    .footer__links,
+    .footer__bottom {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer__links {
+        justify-content: center;
+        margin: 12px 0;
+    }
+
+    .footer__bottom {
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    /* Home Page */
+    .home__page {
+        height: 100vh;
+    }
+
+    .heading__description {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* How it works */
+
+    .how__it-works-cards {
+        grid-template-columns: 1fr;
+        padding: 16px 20px;
+        gap: 32px;
+    }
+
+    /* Features */
+
+    .features {
+        flex-direction: column-reverse;
+        padding: 16px 20px;
+        margin-top: 84px;
+    }
+
+    .features__left {
+      margin-top: 36px;
+    }
+
+    /* Benefits */
+
+    .focus__benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .focus__rings {
+        right: 50%;
+        height: 100%;
+    }
+    
+    .final__cta, 
+    .final__cta-form {
+        width: 100%;
+        padding: 0 32px;
+    }
 }
