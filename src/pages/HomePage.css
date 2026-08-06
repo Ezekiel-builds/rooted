@@ -577,6 +577,13 @@
         margin: 0 auto;
     }
 
+    .home__page-vector-img {
+        top: 0;
+        left: 0;
+       width: 100%;
+       height: 100%;
+    }
+
     /* How it works */
 
     .how__it-works-cards {
@@ -602,11 +609,11 @@
     .focus__benefits {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+     
     .focus__rings {
         right: 50%;
         height: 100%;
-    }
+    } 
     
     .final__cta, 
     .final__cta-form {
