@@ -568,6 +568,10 @@
         height: 100vh;
     }
 
+    .heading__buttons {
+        flex-direction: column;
+    }
+
     .heading__description {
         width: 80%;
         margin: 0 auto;
