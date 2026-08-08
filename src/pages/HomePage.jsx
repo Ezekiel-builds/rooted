@@ -61,7 +61,7 @@ function HomePage() {
                 </div>
 
                 <div className="how__it-works-cards">
-                    <div data-aos="fade-left" data-aos-delay={0.2}  className="how__it-works-card">
+                    <div data-aos="fade-left" data-aos-delay={200}  className="how__it-works-card">
                         <i className="fi fi-ss-book how__it-works-icon how__it-works-icon--primary"></i>
 
                         <div className="how__it-works-card-content">
@@ -78,7 +78,7 @@ function HomePage() {
                         </div>
                     </div>
 
-                    <div  data-aos="fade-left" data-aos-delay={0.4} className="how__it-works-card">
+                    <div  data-aos="fade-left" data-aos-delay={400} className="how__it-works-card">
                        <i className="fi fi-ss-heart how__it-works-icon how__it-works-icon--secondary"></i>
 
                         <div className="how__it-works-card-content">
@@ -95,7 +95,7 @@ function HomePage() {
                         </div>
                     </div>
 
-                    <div  data-aos="fade-left" data-aos-delay={0.6} className="how__it-works-card">
+                    <div  data-aos="fade-left" data-aos-delay={600} className="how__it-works-card">
                        <i className="fi fi-sr-users-alt how__it-works-icon how__it-works-icon--tertiary"></i>
 
                         <div className="how__it-works-card-content">
@@ -115,7 +115,7 @@ function HomePage() {
             </section>
 
             <section className="features">
-                <div  data-aos="fade-right" data-aos-delay={0.2} className="features__left">
+                <div  data-aos="fade-right" data-aos-delay={200} className="features__left">
                     <h3 className="feature__title">
                         Digital spaces that feel like <span className="feature__title--highlight">Physical journals.</span>
                     </h3>
@@ -150,7 +150,7 @@ function HomePage() {
                         
                 </div>
 
-                <div  data-aos="fade-left" data-aos-delay={0.4} className="features__right">
+                <div  data-aos="fade-left" data-aos-delay={400} className="features__right">
                     <div className="feature__image-container">
                         <img src={mockupImg} alt="Rooted mockup" className="feature__image" />
                         <img src={logoImg} alt="Rooted logo" className="feature__sub-image" width={80} />
@@ -222,7 +222,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="final__cta">
+            <section data-aos="fade-up" data-aos-duration={900} className="final__cta">
                 <i className="fi fi-rs-rose-alt final__cta-icon"></i>
 
                 <h3 className="final__cta-heading">
