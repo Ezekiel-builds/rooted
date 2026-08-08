@@ -58,6 +58,11 @@
 }
 
 @media (max-width: 768px) {
+
+    .header__logo-text {
+        display: none;
+    }
+
     .header__nav {
         display: none;
     }

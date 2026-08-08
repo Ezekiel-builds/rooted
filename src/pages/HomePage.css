@@ -323,7 +323,7 @@
 .focus {
     position: relative;
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -339,21 +339,21 @@
 
 .focus__rings {
     position: absolute;
-    top: 240px; /* Pulls the center of the ring circle below the bottom edge */
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
 
-    width: 100%;  
-    height: 100%;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     overflow: hidden;
 
     z-index: 0;
-    pointer-events: none; /* Prevents mouse clicks from being caught by the image */
-    
-    /* Spin Animation */
+    pointer-events: none;
     animation: spinRings 90s linear infinite;
+    opacity: 0.9;
 }
 
 @keyframes spinRings {
@@ -543,10 +543,6 @@
 }
 
 @media (max-width: 768px) {
-    /* Focus */
-    .focus__text {
-        width: 120px;
-    }
     .footer__container {
         flex-direction: column;
         align-items: center;
@@ -564,6 +560,8 @@
     .footer__links {
         justify-content: center;
         margin: 12px 0;
+        flex-wrap: wrap;
+        gap: 16px;
     }
 
     .footer__bottom {
@@ -571,62 +569,80 @@
         margin-top: 8px;
     }
 
-    /* Home Page */
     .home__page {
-        height: 100vh;
+        height: auto;
+        min-height: 100vh;
+        padding: 32px 20px;
     }
 
     .heading__buttons {
         flex-direction: column;
+        width: 100%;
     }
 
     .heading__description {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
     }
 
     .home__page-vector-img {
         top: 0;
         left: 0;
-       width: 100%;
-       height: 100%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.35;
     }
-
-    /* How it works */
 
     .how__it-works-cards {
         grid-template-columns: 1fr;
-     /*    padding: 16px 20px; */
         gap: 32px;
     }
 
-    /* Features */
-
     .features {
-        flex-direction: column-reverse;
-    /*     padding: 16px 20px; */
+        flex-direction: column;
         margin-top: 84px;
+        padding: 16px 20px;
     }
 
     .features__left {
-      margin-top: 36px;
+        margin-top: 36px;
     }
 
-    /* Benefits */
+    .focus {
+        min-height: 700px;
+        padding: 32px 20px;
+        gap: 16px;
+    }
 
     .focus__benefits {
-        grid-template-columns: repeat(2, 1fr);
+        row-gap: 32px;
     }
-     
+
+    .focus__heading-text {
+        font-size: calc(var(--font-xl) - 0.2rem);
+    }
+
+    .focus__text {
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .focus__benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 44px;
+    }
+
     .focus__rings {
-        right: 50%;
-        height: 100%;
-    } 
-    
-    .final__cta, 
+        width: 140%;
+        max-width: none;
+        top: 45%;
+        opacity: 0.45;
+    }
+
+    .final__cta,
     .final__cta-form {
         width: 100%;
-        padding: 0 32px;
+        padding: 0 24px;
     }
 }
 
