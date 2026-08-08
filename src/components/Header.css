@@ -24,6 +24,7 @@
 
 .header__logo-text {
     font-size: var(--font-lg);
+    font-weight: 320px;
     color: var(--HEADER__Logo-COLOR);
 }
 
@@ -34,7 +35,7 @@
 
 .header__nav-link {
     font-size: var(--font-base);
-    font-weight: 600;
+    font-weight: 360;
 }
 
 .header__nav-link:hover {
@@ -44,7 +45,7 @@
 
 .header__sign-up-link {
     font-size: var(--font-base);
-    font-weight: 600;
+    font-weight: 360;
     padding: 8px 16px;
     border-radius: 4px;
     background-color: var(--HERO__BTN-BG);
@@ -57,6 +58,12 @@
 }
 
 @media (max-width: 768px) {
+    .header__nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
     .header__nav {
         display: none;
     }
