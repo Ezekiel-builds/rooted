@@ -11,8 +11,8 @@ function HomePage() {
         <div className="home__page-container">
             <Header />
 
-            <main className="home__page">
-                <img src={vectorImg} alt="Vector image" className="home__page-vector-img"/>
+            <main data-aos="fade-up" className="home__page">
+                <img data-aos="zoom-in" src={vectorImg} alt="Vector image" className="home__page-vector-img"/>
                 <div className="home__page-heading">
                     <span className="heading__eyebrow">
                         A DISCIPLESHIP PLATFORM
@@ -29,7 +29,7 @@ function HomePage() {
                         </p>
                   </div>  
 
-                  <div className="heading__buttons">
+                  <div data-aos="fade-left" className="heading__buttons">
                         <Link to="/request-early-access"
                         onClick={((e) => e.preventDefault())}
                         className="heading__button heading__button--primary">
@@ -46,8 +46,9 @@ function HomePage() {
             </main>
 
             <section className="how__it-works">
-                <div className="how__it-works-heading">
-                    <i className="fi fi-rs-plant-growth heading__icon"></i>
+                <div  data-aos="fade-up" className="how__it-works-heading">
+                    <i className="fi fi-rs-plant-growth heading__
+                    "></i>
 
                     <h3 className="how__it-works-title">
                         Three Rhythms of Growth
@@ -60,7 +61,7 @@ function HomePage() {
                 </div>
 
                 <div className="how__it-works-cards">
-                    <div className="how__it-works-card">
+                    <div data-aos="fade-left" data-aos-delay={0.2}  className="how__it-works-card">
                         <i className="fi fi-ss-book how__it-works-icon how__it-works-icon--primary"></i>
 
                         <div className="how__it-works-card-content">
@@ -77,7 +78,7 @@ function HomePage() {
                         </div>
                     </div>
 
-                    <div className="how__it-works-card">
+                    <div  data-aos="fade-left" data-aos-delay={0.4} className="how__it-works-card">
                        <i className="fi fi-ss-heart how__it-works-icon how__it-works-icon--secondary"></i>
 
                         <div className="how__it-works-card-content">
@@ -94,7 +95,7 @@ function HomePage() {
                         </div>
                     </div>
 
-                    <div className="how__it-works-card">
+                    <div  data-aos="fade-left" data-aos-delay={0.6} className="how__it-works-card">
                        <i className="fi fi-sr-users-alt how__it-works-icon how__it-works-icon--tertiary"></i>
 
                         <div className="how__it-works-card-content">
@@ -114,7 +115,7 @@ function HomePage() {
             </section>
 
             <section className="features">
-                <div className="features__left">
+                <div  data-aos="fade-right" data-aos-delay={0.2} className="features__left">
                     <h3 className="feature__title">
                         Digital spaces that feel like <span className="feature__title--highlight">Physical journals.</span>
                     </h3>
@@ -149,7 +150,7 @@ function HomePage() {
                         
                 </div>
 
-                <div className="features__right">
+                <div  data-aos="fade-left" data-aos-delay={0.4} className="features__right">
                     <div className="feature__image-container">
                         <img src={mockupImg} alt="Rooted mockup" className="feature__image" />
                         <img src={logoImg} alt="Rooted logo" className="feature__sub-image" width={80} />
@@ -157,13 +158,12 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="focus">
+            <section  data-aos="fade-up" className="focus">
             
                 <img src={treeRimgImg} 
                 alt="Abstract tree ring graphics" 
                 className="focus__rings"
                 />
-
                 <div className="focus__heading">
                     <h2 className="focus__heading-text">
                         A Handcrafted Experience For Your Congregation
