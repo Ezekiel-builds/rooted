@@ -17,14 +17,12 @@ function Header() {
                     Home
                 </Link>
                 
-                <Link to="/bible-reading" 
-                onClick={((e) => e.preventDefault())}
+                <Link to="/BibleReading" 
                 className="header__nav-link">
                     Bible Reading
                 </Link>
 
-                <Link to="/memory-verse" 
-                onClick={((e) => e.preventDefault())}
+                <Link to="/MemoryVerse" 
                 className="header__nav-link">
                     Memory Verse
                 </Link>
@@ -37,12 +35,12 @@ function Header() {
                 
             </nav>
 
-            <Link to="/sign-up" 
+            <Link to="/signUp" 
             className="header__sign-up-link">
                 Sign up
             </Link>
         </header>
     )
-}
+};
 
 export default Header;

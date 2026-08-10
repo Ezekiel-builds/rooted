@@ -1,0 +1,130 @@
+.form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 60px;
+}
+
+.form__heading {
+    text-align: center;
+    max-width: 520px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form__header {
+    font-size: var(--font-xl);
+    color: var(--HEADERS);
+    font-weight: 400;
+}
+
+.form__description {
+    color: var(--COLOR);
+}
+
+.signUp__form {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+    padding: 32px 40px;
+    border: 1px solid var(--BORDER__COLOR);
+    border-radius: 12px;
+
+    background-color: var(--HERO__Button-COLOR);
+}
+
+.form__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form__meta .form__label {
+    color: var(--COLOR);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form__meta .form__input {
+    padding: 16px 13px;
+    background-color: var(--CARD__BG);
+    border: none;
+    border-radius: 8px;
+}
+
+.form__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.form__submit-button {
+    width: 100%;
+    padding: 16px 0;
+    background-color: var(--HERO__BTN-BG);
+    color: var(--HERO__Button-COLOR);
+    font-size: var(--font-base);
+    
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form__alternate {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+}
+
+.form__alternate .line {
+  flex: 1;
+  height: 1px;
+   background: linear-gradient(
+    to bottom,
+    rgba(194, 200, 194, 0),
+    #C2C8C2,
+    #C2C8C2
+  );
+  display: block;
+}
+
+.form__alternate .alternate__text {
+    color: var(--TEXT__COLOR);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.signUp__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--HEADER__BG);
+    padding: 12px 0;
+    border: inset 1px solid var(--BORDER__COLOR);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.5);
+    font-size: var(--font-md);
+}
+
+.form__bottom-text {
+    color: var(--TEXT__COLOR);
+}
+
+.form__bottom-text a {
+    text-decoration: underline;
+    color: var(--HEADERS);
+}

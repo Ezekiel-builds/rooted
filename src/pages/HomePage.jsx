@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import mockupImg from '../assets/Rooted-Mockup.png';
 import logoImg from '../assets/logo.png';
 import vectorImg from '../assets/SVG.png';
@@ -246,23 +247,9 @@ function HomePage() {
                 </form>
             </section>
 
-            <footer className='footer__container'>
-                <div className='footer__logo'>
-                    <h4 className="footer__logo-text">Rooted</h4>
-                </div>
-
-                <div className="footer__links">
-                    <Link to="" className="footer__link">PRIVACY</Link>
-                    <Link  to="" className="footer__link">TERMS</Link>
-                    <Link  to="" className="footer__link">SUPPORT</Link>
-                </div>
-
-                <div className='footer__bottom'>
-                    <p className="footer__text">&copy; 2026 Rooted Discipleship. Sown in faith.</p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     )
-}
+};
 
 export default HomePage;
