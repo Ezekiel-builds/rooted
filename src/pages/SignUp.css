@@ -128,3 +128,9 @@
     text-decoration: underline;
     color: var(--HEADERS);
 }
+
+@media (max-width: 768px) {
+    .form__container {
+        padding: 16px 20px;
+    }
+}
