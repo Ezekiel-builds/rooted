@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import google from '../assets/Google.png';
+import logoImg from '../assets/logo.png';
 import './SignUp.css';
 
 function SignUp() {
@@ -11,8 +12,12 @@ function SignUp() {
 
             <div className="form__container">
                 <div className="form__heading">
+                    <div className="logo">
+                        <img src={logoImg} alt="Logo image" />
+                    </div>
+                    
                     <h3 className="form__header">
-                        Begin Your Journey 
+                        Begin Journey
                     </h3>
 
                     <p className="form__description">

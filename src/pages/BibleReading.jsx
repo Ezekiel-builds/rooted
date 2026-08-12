@@ -6,6 +6,6 @@ function BibleReading() {
             <Header/>
         </>
     )
-}
+};
 
 export default BibleReading;

@@ -16,6 +16,12 @@
     gap: 20px;
 }
 
+.form__heading .logo img {
+    width: 72px;
+    object-fit: cover;
+    background-color: var(--BORDER__COLOR);
+}
+
 .form__header {
     font-size: var(--font-xl);
     color: var(--HEADERS);
