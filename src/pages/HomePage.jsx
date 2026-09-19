@@ -35,7 +35,7 @@ function HomePage() {
                   </div>  
 
                   <div data-aos="fade-left" className="heading__buttons">
-                        <Link to="/request-early-access"
+                        <Link 
                         onClick={handleEarlyAccess}
                         className="heading__button heading__button--primary">
                             Request Early Access

@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import BibleReading from './pages/BibleReading';
 import MemoryVerse from './pages/MemoryVerse';
 import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 import './App.css'
 
 function App() {
@@ -21,9 +22,10 @@ function App() {
     <>
     <Routes>
        <Route path="/" element={<HomePage/>} />
-       <Route path="/BibleReading" element={<BibleReading />} />
-       <Route path="/MemoryVerse" element={<MemoryVerse />} />
-       <Route path="/SignUp" element={<SignUp />} />
+       <Route path="/bible-reading" element={<BibleReading />} />
+       <Route path="/memory-verse" element={<MemoryVerse />} />
+       <Route path="/sign-up" element={<SignUp />} />
+       <Route path="/sign-in" element={<SignIn/>} />
     </Routes>
     </>
   )

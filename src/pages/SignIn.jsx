@@ -1,12 +1,11 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import google from '../assets/Google.png';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import logoImg from '../assets/logo.png';
-import './SignUp.css';
-import { Link } from "react-router-dom";
-
-function SignUp() {
-    return (
+import google from '../assets/Google.png';
+import '../pages/SignUp.css';
+function SignIn() {
+     return (
         <>
 
             <Header />
@@ -18,39 +17,29 @@ function SignUp() {
                     </div>
                     
                     <h3 className="form__header">
-                        Begin Journey
+                        Welcome Back
                     </h3>
 
                     <p className="form__description">
-                        Create your account to start cultivating daily
-                        rhythms of Word, prayer, and life together.
+                       Continue your quiet walk of devotion, thoughtful reflection, 
+                       and church life together.
                     </p>
                 </div>
 
                 <form className="signUp__form">
                     <div className="form__meta">
-                        <label htmlFor="Full name" className="form__label">Full Name</label>
-                        <input type="text" placeholder="Jane Doe" className="form__input" />
+                        <label htmlFor="Email" className="form__label">Email Address</label>
+                        <input type="text" placeholder="Jane.doe@example.gmail.com" className="form__input" />
                     </div>
 
                     <div className="form__meta">
-                        <label htmlFor="Church name" className="form__label">Church Name<span>(Optional)</span></label>
-                        <input type="text" placeholder="Grace Community Church" className="form__input" />
-                    </div>
-
-                    <div className="form__meta">
-                        <label htmlFor="Full name" className="form__label">Email Address</label>
-                        <input type="email" placeholder="Jane@example.com" className="form__input" />
-                    </div>
-
-                    <div className="form__meta">
-                        <label htmlFor="Full name" className="form__label">Password</label>
+                        <label htmlFor="Password" className="form__label">Password</label>
                         <input type="password" placeholder="••••••••" className="form__input" />
                     </div>
 
                 <div className="form__bottom">
                     <button type="submit" className="form__submit-button">
-                        Start Growing
+                        Continue Growing
                     </button>
 
                     <div className="form__alternate">
@@ -65,7 +54,7 @@ function SignUp() {
                     </button>
 
                     <p className="form__bottom-text">
-                        Already have an account? <Link to="/sign-in">Sign In</Link>
+                        Don't have an account? <Link to="/sign-up">Sign Up</Link>
                     </p>
                 </div>
                 </form>
@@ -76,4 +65,4 @@ function SignUp() {
     )
 }
 
-export default SignUp;
+export default SignIn;
