@@ -8,6 +8,10 @@ import treeRimgImg from '../assets/Tree-ring.png';
 import './HomePage.css';
 
 function HomePage() {
+    function handleEarlyAccess() {
+        window.open('https://tally.so/r/rjXkKL', '_blank', 'noopener,noreferrer');
+    }
+
     return (
         <div className="home__page-container">
             <Header />
@@ -32,13 +36,13 @@ function HomePage() {
 
                   <div data-aos="fade-left" className="heading__buttons">
                         <Link to="/request-early-access"
-                        onClick={((e) => e.preventDefault())}
+                        onClick={handleEarlyAccess}
                         className="heading__button heading__button--primary">
                             Request Early Access
                         </Link>
 
                         <Link to="/explore-the-rythms"
-                        onClick={((e) => e.preventDefault())}
+                        onClick={handleEarlyAccess}
                         className="heading__button heading__button--secondary">
                             Explore the Rhythms
                         </Link>
