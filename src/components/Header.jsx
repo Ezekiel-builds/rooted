@@ -35,7 +35,7 @@ function Header() {
                 
             </nav>
 
-            <Link to="/signUp" 
+            <Link to="/sign-up" 
             className="header__sign-up-link">
                 Sign up
             </Link>

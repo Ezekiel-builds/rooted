@@ -4,6 +4,15 @@
   padding: 40px 20px;
 }
 
+.dashboard-container h1 {
+    font-weight: 460;
+}
+
+h2 {
+    font-size: var(--font-xl);
+    font-weight: 400;
+}
+
 .dashboard-subtitle {
   font-style: italic;
   color: #555;
