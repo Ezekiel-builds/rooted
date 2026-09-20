@@ -1,0 +1,64 @@
+.dashboard-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.dashboard-subtitle {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+.dashboard-card {
+  background: #f2f0ec;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.card-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.verse-text,
+.reading-description {
+  font-style: italic;
+  color: #444;
+  margin: 16px 0;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.reflection-label {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.reflection-box {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 8px;
+  font-family: inherit;
+}
+
+.submit-btn {
+  background: #1a2e22;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 16px;
+  cursor: pointer;
+}

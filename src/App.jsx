@@ -7,6 +7,7 @@ import BibleReading from './pages/BibleReading';
 import MemoryVerse from './pages/MemoryVerse';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import Dashboard from './pages/Dashboard';
 import './App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
        <Route path="/memory-verse" element={<MemoryVerse />} />
        <Route path="/sign-up" element={<SignUp />} />
        <Route path="/sign-in" element={<SignIn/>} />
+       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
     </>
   )
