@@ -1,3 +1,5 @@
+import { supabase } from '../supabaseClient';
+import { useState} from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -5,7 +7,26 @@ import logoImg from '../assets/logo.png';
 import google from '../assets/Google.png';
 import '../pages/SignUp.css';
 function SignIn() {
-     return (
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    async function handleSignIn(e) {
+        e.preventDefault();
+
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email,
+            password
+        });
+
+        if (error) {
+            console.log(error.message);
+            return;;
+        }
+
+        console.log(`Logged in successfully: ${data.user.email}`);
+    }
+
+    return (
         <>
 
             <Header />
@@ -26,15 +47,25 @@ function SignIn() {
                     </p>
                 </div>
 
-                <form className="signUp__form">
+                <form className="signUp__form" onSubmit={handleSignIn}>
                     <div className="form__meta">
                         <label htmlFor="Email" className="form__label">Email Address</label>
-                        <input type="text" placeholder="Jane.doe@example.gmail.com" className="form__input" />
+                        <input 
+                        type="email" 
+                        placeholder="Jane.doe@example.gmail.com" 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="form__input" />
                     </div>
 
                     <div className="form__meta">
                         <label htmlFor="Password" className="form__label">Password</label>
-                        <input type="password" placeholder="••••••••" className="form__input" />
+                        <input 
+                        type="password" 
+                        placeholder="••••••••" 
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="form__input" />
                     </div>
 
                 <div className="form__bottom">
