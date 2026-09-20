@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router'
 import { useEffect } from 'react';
+import { useAuth } from './components/AuthContext.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import HomePage from './pages/HomePage';
@@ -11,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import './App.css'
 
 function App() {
+  const { user } = useAuth();
   useEffect(() => {
     AOS.init({
       duration: 800,     // Animation duration in milliseconds (0.8s for smooth, serene entry)
@@ -23,11 +25,11 @@ function App() {
     <>
     <Routes>
        <Route path="/" element={<HomePage/>} />
-       <Route path="/bible-reading" element={<BibleReading />} />
-       <Route path="/memory-verse" element={<MemoryVerse />} />
-       <Route path="/sign-up" element={<SignUp />} />
-       <Route path="/sign-in" element={<SignIn/>} />
-       <Route path="/dashboard" element={<Dashboard />} />
+       <Route path="/bible-reading" element={user ? <BibleReading /> : <HomePage />} />
+       <Route path="/memory-verse" element={user ? <MemoryVerse /> : <HomePage />} />
+       <Route path="/sign-up" element={user ? <Dashboard /> : <SignUp />} />
+       <Route path="/sign-in" element={user ? <Dashboard/> : <SignIn />} />
+       <Route path="/dashboard" element={user ? <Dashboard /> : <HomePage />} />
     </Routes>
     </>
   )

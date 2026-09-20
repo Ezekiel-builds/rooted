@@ -1,14 +1,16 @@
+import { useAuth } from "../components/AuthContext";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./Dashboard.css";
 
 function Dashboard() {
+  const { user, profile } = useAuth();
   return (
     <>
       <Header />
 
       <div className="dashboard-container">
-        <h1>Liam Carter</h1>
+        <h1>{profile?.full_name}</h1>
         <p className="dashboard-subtitle">
           Grace Community Church • Youth Ministry
         </p>
