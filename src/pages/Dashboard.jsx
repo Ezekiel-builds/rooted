@@ -1,10 +1,50 @@
 import { useAuth } from "../components/AuthContext";
+import { useState, useEffect } from 'react';
+import { supabase } from "../supabaseClient";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./Dashboard.css";
 
 function Dashboard() {
-  const { user, profile } = useAuth();
+  const { profile } = useAuth();
+  const [verse, setVerse] = useState(null);
+  const [reading, setReading] = useState(null);
+
+  useEffect(() => {
+    async function fetchVerse() {
+       const { data, error } = await supabase
+        .from('weekly_verses')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(1)
+        .single();
+
+      if(error) {
+        console.log(`Error fetching weekly verse: ${error.message}`)
+      } else {
+        setVerse(data);
+      }
+    }
+
+    async function fetchReading() {
+      const { data, error } = await supabase 
+      .from("daily_readings")
+      .select("*")
+      .order("created_at", {ascending: false})
+      .limit(1)
+      .single();
+
+      if(error) {
+        console.log(`Fetch reading error: ${error.message}`)
+      }else {
+        setReading(data)
+      }
+    }
+
+    fetchVerse();
+    fetchReading();
+  }, [])
+
   return (
     <>
       <Header />
@@ -12,15 +52,16 @@ function Dashboard() {
       <div className="dashboard-container">
         <h1>{profile?.full_name}</h1>
         <p className="dashboard-subtitle">
-          Grace Community Church • Youth Ministry
+          {profile?.church_name}
         </p>
 
         <div className="dashboard-card">
           <p className="card-label">WEEKLY MEMORY VERSE</p>
-          <h2>This week's verse: John 3:16</h2>
+          <h2>
+            This week's verse: {verse?.verse_reference ?? "Loading..."}
+          </h2>
           <p className="verse-text">
-            "For God so loved the world, that he gave his only Son, that whoever
-            believes in him should not perish but have eternal life."
+            {verse?.verse_text ?? "Loading this week's verse..."}
           </p>
           <label className="checkbox-row">
             <input type="checkbox" />I recited this week's verse
@@ -29,11 +70,11 @@ function Dashboard() {
 
         <div className="dashboard-card">
           <p className="card-label">DAILY BIBLE READING</p>
-          <h2>Today's reading: Genesis 3</h2>
+          <h2>
+            Today's reading: {reading?.reading_reference ?? "Loading..."}
+          </h2>
           <p className="reading-description">
-            The Fall of Man: Temptation enters the garden, human trust falters,
-            and God speaks the foundational promise of redemption amid broken
-            fellowship.
+            {reading?.description ?? "Loading today's reading..."}
           </p>
           <label className="checkbox-row">
             <input type="checkbox" />I read today
