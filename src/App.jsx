@@ -9,6 +9,7 @@ import MemoryVerse from './pages/MemoryVerse';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Dashboard from './pages/Dashboard';
+import AdminDashboard from './pages/AdminDashboard.jsx';
 import './App.css'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
        <Route path="/sign-up" element={user ? <Dashboard /> : <SignUp />} />
        <Route path="/sign-in" element={user ? <Dashboard/> : <SignIn />} />
        <Route path="/dashboard" element={user ? <Dashboard /> : <HomePage />} />
+       <Route path="/admin-dashboard" element={ <AdminDashboard />} />
     </Routes>
     </>
   )

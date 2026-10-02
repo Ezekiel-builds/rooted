@@ -1,3 +1,4 @@
+import { supabase } from "../supabaseClient";
 import { Link } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 import logoImg from "../assets/logo.png";
@@ -5,6 +6,16 @@ import "./Header.css";
 
 function Header() {
   const { user } = useAuth();
+
+async function handleSignOut() {
+  const { error } = await supabase.auth.signOut();
+  
+  if (error) {
+    console.error('Error signing out:', error.message);
+  } else {
+    console.log('User signed out successfully!');
+  }
+}
 
   return (
     <header className="header">
@@ -36,23 +47,16 @@ function Header() {
         </Link>
       </nav>
 
-  {/*     {user ? (
-        <button
-          type="button"
-           onClick={handleSignOut} 
-          className="header__sign-up-link"
-        >
-          Sign Out
-        </button>
-      ) : (
-        <Link to="/sign-up" className="header__sign-up-link">
-          Sign Up
-        </Link>
-      )} */}
-
-        <Link to="/sign-up" className="header__sign-up-link">
-          Sign Up
-        </Link>
+        {user ? (
+          <Link to="/dashboard" className="header__sign-up-link" onClick={handleSignOut}>
+            Sign Out
+          </Link>
+        ) : 
+        (
+          <Link to="/sign-in" className="header__sign-up-link">
+            Sign In
+          </Link>
+        )}
     </header>
   );
 }
