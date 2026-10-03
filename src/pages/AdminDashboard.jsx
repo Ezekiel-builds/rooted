@@ -1,6 +1,7 @@
 import { supabase } from '../supabaseClient';
 import Header from '../components/Header';
 import { useEffect, useState } from 'react';
+import './AdminDashboard.css';
 
 function AdminDashboard() {
     const [members, setMembers] = useState([]);
@@ -64,7 +65,7 @@ function AdminDashboard() {
                     </div>
                 </div>
 
-                <div className="admin__dasboard-stats">
+                <div className="admin__dashboard-stats">
                     <div className="admin__dashboard-stat">
                        <span className="admin__dashboard-stat-eyebrow">
                             VERSE CHECK-INS THIS WEEK
@@ -72,18 +73,18 @@ function AdminDashboard() {
                        </span> 
 
                        <div className="admin__dashboard-stat-data">
-                            <h4 className="admin__dashboard-stat-value">
+                            <h4 className="admin__dashboard-stat-value ">
                                     {membersWithCheckins.length}/{totalMembers}
                             </h4>
 
                             <span className="admin__dashboard-stat-label">
-                                    { totalMembers > 0 ? Math.round((membersWithCheckins.length / totalMembers) * 100) : 0 }%
+                                    <i className="fi fi-ts-horizontal-rule dash__icon"></i> { totalMembers > 0 ? Math.round((membersWithCheckins.length / totalMembers) * 100) : 0 }%
                             </span>
                        </div>    
                     </div>
 
                     <div className="admin__dashboard-stat">
-                            <span className="admin__dshboard-stat-eyebrow">
+                            <span className="admin__dashboard-stat-eyebrow">
                                 READING CONSISTENCY THIS MONTH
                             </span>
 
@@ -135,7 +136,6 @@ function AdminDashboard() {
                             LAST ACTIVE
                         </span>
                     </div>
-]
                         {members.map((member) => {
                             return (
                                 <div className="admin__member-row" key={member.id}>
@@ -144,15 +144,15 @@ function AdminDashboard() {
                                     </p>
 
                                     <p className="admin__member-verse">
-                                       {member.weekly_verse_checkins.length > 0 ? <i class="fi fi-rs-check"></i> : "——" }
+                                       {member.weekly_verse_checkins.length > 0 ? <i className="fi fi-rs-check"></i> : <i className="fi fi-ts-horizontal-rule dash__icon"></i> }
                                     </p>
 
                                     <p className="admin__member-reading">
-                                        {member.daily_reading_logs.length > 0 ? <i class="fi fi-rs-check"></i> : "——" }
+                                        {member.daily_reading_logs.length > 0 ? <i className="fi fi-rs-check"></i> : <i className="fi fi-ts-horizontal-rule dash__icon"></i> }
                                     </p>
 
                                     <p className="admin__member-last-active">
-                                        {member.weekly_verse_checkins.length > 0 ? new Date(member.weekly_verse_checkins[0].created_at).toLocaleDateString() : "——" }
+                                        {member.weekly_verse_checkins.length > 0 ? new Date(member.weekly_verse_checkins[0].created_at).toLocaleDateString() : <i class="fi fi-ts-horizontal-rule dash__icon"></i> }
                                     </p>
                                 </div>
                             )

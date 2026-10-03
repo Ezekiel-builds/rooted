@@ -1,0 +1,154 @@
+/* AdminDashboard */
+
+.admin__dashboard-container {
+    width: 100%;
+    margin: 48px auto;
+    padding: 0  3.5rem;
+}
+
+.admin__dashboard-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid #E5E2DB;
+    padding-bottom: 2rem;
+}
+
+.admin__church-name {
+    font-size: clamp(0.74rem, 1.5vw, 1rem);
+    font-weight: 400;
+    color: #52634F;
+}
+
+.admin__name {
+    font-size: clamp(2.4rem, 2.5vw, 2rem);
+    color: #071C13;
+    font-weight: 400;
+}
+
+.admin__dashboard-subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin__dashboard-subtitle-text {
+    font-size: clamp(0.74rem, 1.5vw, 1rem);
+    font-weight: 400;
+    color: #52634F;
+}
+
+.admin__dashboard-date {
+    position: relative;
+    top: 6px;
+    color: #727874;
+    font-size: clamp(0.74rem, 1.5vw, 1rem); 
+    font-weight: 400;
+}
+
+/* Admin Stats */
+.admin__dashboard-stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.admin__dashboard-stat {
+    min-width: 360px;
+    line-height: 2;
+    background: #FFFFFF;
+    border: 1px solid #E5E2DB;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+}
+
+.admin__dashboard-stat-eyebrow {
+    color: #727874;
+    font-size: clamp(0.74rem, 1.5vw, 1rem);
+}
+
+.admin__dashboard-stat-data {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin__dashboard-stat-value {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-family: var(--HEADER__FONT);
+    font-weight: 400;
+    color: #071C13;
+}
+
+.admin__dashboard-stat-label {
+    font-size: clamp(1.2rem, 1.5vw, 1rem);
+    color: #52634F;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dash__icon {
+    position: relative;
+    top: 4px;
+    font-size: clamp(1.2rem, 1.5vw, 1rem);
+    color: #52634F;
+}
+
+/* Admin Dashboard Chart */
+.admin__chart-container {
+    margin: 40px 0;
+}
+
+/* Admin Dashboard Members Table */
+.admin__members {
+    background: #FFFFFF;
+/*     padding: 1.5rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin__members-heading {
+    line-height: 1.4;
+    padding: 1.5rem;
+}
+
+.admin__members-title {
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-family: var(--HEADER__FONT);
+    font-weight: 400;
+    color: #071C13;
+}
+
+.admin__heading-subtitle {
+    font-size: clamp(0.74rem, 1.5vw, 1rem);
+    font-weight: 400;
+    color: #727874;
+}
+
+/* Admin Dashboard Members Table Topbar */
+.admin__members-topbar {
+    display: flex;
+    justify-content: space-between;
+  /*   margin-top: 24px; */
+    border: 1px solid #E5E2DB;
+    border-left: none;
+    border-right: none;
+    padding: 0.4rem 1.5rem;
+    background: rgba(243, 243, 239, 0.5);
+}
+
+.admin__members-topbar-label {
+    font-size: clamp(0.70rem, 1.5vw, 1rem);
+    font-weight: 400;
+    color: #727874;
+}
+
+.admin__member-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1.5rem;
+}
