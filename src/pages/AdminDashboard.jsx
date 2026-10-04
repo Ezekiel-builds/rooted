@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
 import Header from '../components/Header';
-import { useEffect, useState } from 'react';
+
 import './AdminDashboard.css';
 
 function AdminDashboard() {
@@ -105,7 +106,7 @@ function AdminDashboard() {
                 </div>
 
                 <div className="admin__chart-container">
-                    // Chart or graph component would be placed here
+                   
                 </div>
 
                 <div className="admin__members">
